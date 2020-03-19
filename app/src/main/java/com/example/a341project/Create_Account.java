@@ -44,16 +44,16 @@ public class Create_Account extends AppCompatActivity implements AdapterView.OnI
     }
     public void ClickSubmit(View view){
 
-        if(Uname.getText().toString().length()<1||Upass.getText().toString().length()<1) {
+        if(Uname.getText().toString().length()<1||Upass.getText().toString().length()<1) {// check the username and password can not be empty
             Toast.makeText(Create_Account.this,"Please enter your user name and password",Toast.LENGTH_LONG).show();
 
         }else {
             if (UserType.equals("Customer")) {
-                if (NameExist("Customer.txt", Uname.getText().toString())==false) {
+                if (NameExist("Customer.txt", Uname.getText().toString())==false) { //check if the username is not exist
                     String tofile=Uname.getText().toString()+","+Upass.getText().toString()+"\n";
                     FileOutputStream outputStream;
                     try{
-                        outputStream= openFileOutput("Customer.txt", Context.MODE_APPEND);
+                        outputStream= openFileOutput("Customer.txt", Context.MODE_APPEND);//write file
                         outputStream.write(tofile.getBytes());
                         outputStream.close();
                     }catch (FileNotFoundException e){
@@ -116,7 +116,7 @@ public class Create_Account extends AppCompatActivity implements AdapterView.OnI
             InputStreamReader ISR= new InputStreamReader(file);
             BufferedReader buff= new BufferedReader(ISR);
 
-            while ((line=buff.readLine())!=null){
+            while ((line=buff.readLine())!=null){//read the file and check if the user name is exist
                 String [] part=line.split(",");
                 UnameArray.add(part[0]);
                 //UpassArray.add(part[1]);

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
         Uname= findViewById(R.id.MainEditTextUserName);
         Upass= findViewById(R.id.MainEditTextPassword);
-        user=findViewById(R.id.MainUserSpinner);
+        user=findViewById(R.id.MainUserSpinner);//user type
         ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.UserType,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         user.setAdapter(adapter);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String line="";
         boolean check=false;
 
-        if(UserType.equals("Customer")){
+        if(UserType.equals("Customer")){//read the file and check the username and password
             try {
                 FileInputStream file = openFileInput("Customer.txt");
                 InputStreamReader ISR = new InputStreamReader(file);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 e.printStackTrace();
             }//catch
 
-            if(check==true){
+            if(check==true){ //if the username and password is correct, jump to the corresponding page
             Intent intent=new Intent(MainActivity.this,CustomerView.class);
             startActivity(intent);
         }//if equal
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }//click log in
 
-    public void ClickCreateAccount(View view){
+    public void ClickCreateAccount(View view){//when click create account, jump to the create account page
         Intent intent=new Intent(MainActivity.this,Create_Account.class);
         Uname.getText().clear();
         Upass.getText().clear();

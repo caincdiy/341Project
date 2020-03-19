@@ -27,12 +27,12 @@ public class oh_pizza_page extends AppCompatActivity {
         Fries=(TextView) findViewById(R.id.OhPizzaTextFries);
         Salad=(TextView) findViewById(R.id.OhPizzaTextAvocado);
         Cola=(TextView) findViewById(R.id.OhPizzaTextCoca);
-        Total=(TextView)findViewById(R.id.OhPizzaTextTotal);
+        Total=(TextView)findViewById(R.id.OhPizzaTextTotal); //text view for number of food
 
 
     }
 
-    public void OnPizzaClickCart(View view){
+    public void OnPizzaClickCart(View view){//jump to cart page
         Intent intent=new Intent(oh_pizza_page.this,CartPage.class);
         startActivity(intent);
 
@@ -41,10 +41,10 @@ public class oh_pizza_page extends AppCompatActivity {
 
     public void OhPizzaClickBack(View view){
     finish();
-    }// click Back
+    }// click Back jump to restaurant list page
 
 
-    public void OnPizzaClickMButton(View view){
+    public void OnPizzaClickMButton(View view){//when click minus button
         switch(view.getId()){
             case R.id.OhPizzaButtonCheesePM:
                 if(CPCount>0){
@@ -90,7 +90,7 @@ public class oh_pizza_page extends AppCompatActivity {
     }// click Minus button
 
 
-    public void OnPizzaClickPButton(View view){
+    public void OnPizzaClickPButton(View view){ //when click add button
         switch(view.getId()){
             case R.id.OhPizzaButtonCheesePP:
                     CPCount++;

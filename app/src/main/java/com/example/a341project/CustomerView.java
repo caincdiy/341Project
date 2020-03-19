@@ -19,7 +19,7 @@ public class CustomerView extends AppCompatActivity {
 
     String[] RestaurantTitle ={"Oh! Pizza","Oishi Sushi","Delicious Asian cuisine","Burger Queen","Nice Salad"};
     String[] RestaurantDescription ={"Restaurant Description: \nDelicious Pizza, fries and soft drink ","Restaurant Coming Soon","Restaurant Coming Soon","Restaurant Coming Soon","Restaurant Coming Soon"};
-    int[] RestaurantImages={R.drawable.cheese_pizza,R.drawable.sushi_combo,R.drawable.curry_rice,R.drawable.cheese_burger,R.drawable.green_salad};
+    int[] RestaurantImages={R.drawable.cheese_pizza,R.drawable.sushi_combo,R.drawable.curry_rice,R.drawable.cheese_burger,R.drawable.green_salad};//elements that will display in the list view
     ListView list;
     @Override
 
@@ -33,7 +33,7 @@ public class CustomerView extends AppCompatActivity {
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {//check the list view button is clicked
                 if(id==0){
                     Intent intent=new Intent(CustomerView.this,oh_pizza_page.class);
                     startActivity(intent);
@@ -46,7 +46,7 @@ public class CustomerView extends AppCompatActivity {
 
 
     }
-    public void CustomerViewClickMyAccount(View view){
+    public void CustomerViewClickMyAccount(View view){//if my account button is clicked jump to new page
         Intent intent=new Intent(CustomerView.this,MyAccountPage.class);
         startActivity(intent);
     }//click my account

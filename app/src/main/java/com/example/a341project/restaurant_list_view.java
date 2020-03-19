@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-//helper class for restaurant list
+                                                                                                     //helper class for restaurant list do nothing
 
 public class restaurant_list_view extends ArrayAdapter<String> {
 
