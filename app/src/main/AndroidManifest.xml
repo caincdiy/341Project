@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DriverView"></activity>
+        <activity android:name=".CartPage"></activity>
+        <activity android:name=".MyAccountPage" />
+        <activity android:name=".oh_pizza_page" />
+        <activity android:name=".DriverView" />
         <activity android:name=".RestaurantView" />
         <activity android:name=".CustomerView" />
         <activity android:name=".Create_Account" />

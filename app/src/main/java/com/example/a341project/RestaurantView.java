@@ -12,3 +12,4 @@ public class RestaurantView extends AppCompatActivity {
         setContentView(R.layout.activity_restaurant_view);
     }
 }
+//for later

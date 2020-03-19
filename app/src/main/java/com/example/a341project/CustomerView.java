@@ -2,13 +2,52 @@ package com.example.a341project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class CustomerView extends AppCompatActivity {
 
+    String[] RestaurantTitle ={"Oh! Pizza","Oishi Sushi","Delicious Asian cuisine","Burger Queen","Nice Salad"};
+    String[] RestaurantDescription ={"Restaurant Description: \nDelicious Pizza, fries and soft drink ","Restaurant Coming Soon","Restaurant Coming Soon","Restaurant Coming Soon","Restaurant Coming Soon"};
+    int[] RestaurantImages={R.drawable.cheese_pizza,R.drawable.sushi_combo,R.drawable.curry_rice,R.drawable.cheese_burger,R.drawable.green_salad};
+    ListView list;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_view);
+
+        list=(ListView)findViewById(R.id.listview);
+        restaurant_list_view RL= new restaurant_list_view(this,RestaurantTitle,RestaurantDescription,RestaurantImages);//create new java object
+        list.setAdapter(RL);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(id==0){
+                    Intent intent=new Intent(CustomerView.this,oh_pizza_page.class);
+                    startActivity(intent);
+                }// jump to Oh Pizza page
+                else {
+                    Toast.makeText(CustomerView.this,"Coming Soon !", Toast.LENGTH_LONG).show();
+                }//else comming soon
+                }
+        });// On item click listener
+
+
     }
+    public void CustomerViewClickMyAccount(View view){
+        Intent intent=new Intent(CustomerView.this,MyAccountPage.class);
+        startActivity(intent);
+    }//click my account
 }
