@@ -2,6 +2,7 @@ package com.example.a341project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         user.setAdapter(adapter);
         user.setOnItemSelectedListener(this);
+        go();
     }
 
     @Override
@@ -35,5 +37,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+    public void go(){
+        Intent intent=new Intent(this,RestaurantIndex.class);
+        startActivity(intent);
     }
 }
