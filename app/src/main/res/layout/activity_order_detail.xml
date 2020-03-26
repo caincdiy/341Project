@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OrderDetail">
-
     <TextView
         android:id="@+id/orderName"
         android:layout_width="wrap_content"
@@ -69,64 +68,6 @@
                 android:text="Addition" />
         </TableRow>
 
-        <TableRow>
-
-            <TextView
-                android:layout_column="1"
-                android:height="40dp"
-                android:padding="3dip"
-                android:text="Pizza" />
-
-            <TextView
-                android:layout_column="1"
-                android:height="40dp"
-                android:padding="3dip"
-                android:text="1" />
-
-            <TextView
-                android:height="40dp"
-                android:gravity="right"
-                android:padding="3dip"
-                android:text="None" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_column="1"
-                android:height="40dp"
-                android:padding="3dip"
-                android:text="Fries" />
-
-            <TextView
-                android:layout_column="1"
-                android:height="40dp"
-                android:padding="3dip"
-                android:text="2" />
-
-            <TextView
-                android:height="40dp"
-                android:gravity="right"
-                android:padding="3dip"
-                android:text="None" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_column="2"
-                android:height="40dp"
-                android:padding="3dip"
-                android:text="Total:" />
-
-
-            <TextView
-                android:height="40dp"
-                android:gravity="right"
-                android:padding="3dip"
-                android:text="$ 24" />
-        </TableRow>
-
 
     </TableLayout>
 
@@ -137,7 +78,9 @@
         android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
         android:layout_marginTop="84dp"
+        android:onClick="acceptOrder"
         android:text="Accept"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
 
@@ -150,5 +93,21 @@
         android:text="cancel"
         app:layout_constraintStart_toEndOf="@+id/acceptOrder"
         app:layout_constraintTop_toTopOf="@+id/acceptOrder" />
+
+    <ListView
+        android:id="@+id/orderDetialListview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout2"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+    <TextView
+        android:id="@+id/orderDetailTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: 24$"
+        app:layout_constraintEnd_toEndOf="@+id/orderDetialListview"
+        app:layout_constraintTop_toBottomOf="@+id/orderDetialListview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
