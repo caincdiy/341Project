@@ -7,7 +7,7 @@
     tools:context=".DriverOrdersPage">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/orderView"
         android:layout_width="369dp"
         android:layout_height="75dp"
         android:layout_marginStart="12dp"
@@ -21,9 +21,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!--
+        For customerOrders, find a way to add @strings to text wrt customer distance
+    -->
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/customerOrders"
         android:layout_width="368dp"
         android:layout_height="65dp"
         android:layout_marginStart="12dp"
@@ -36,5 +38,6 @@
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/orderView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@
     <string name="app_name">341Project</string>
 
     <string name="orderText">Orders</string>
-    <string name="reviewText" >Reviews</string>
+    <string name="reviewText">Reviews</string>
     <string name="changeInfoText">Change Information</string>
     <string name="otherInfoText">Other Information</string>
 
