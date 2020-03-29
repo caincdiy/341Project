@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">341Project</string>
 
+    <string name="orderText">Orders</string>
+    <string name="reviewText">Reviews</string>
+    <string name="changeInfoText">Change Information</string>
+    <string name="otherInfoText">Other Information</string>
+
     <string-array name="UserType">
-    <item>Customer</item>
-    <item>Restaurant</item>
-    <item>Driver</item>
+        <item>Customer</item>
+        <item>Restaurant</item>
+        <item>Driver</item>
     </string-array>
 
 </resources>

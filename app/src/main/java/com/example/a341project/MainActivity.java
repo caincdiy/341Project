@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner user;
@@ -35,5 +36,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void login(View view){
+        Intent intent = new Intent(this, DriverMenu.class);
+        startActivity(intent);
     }
 }
