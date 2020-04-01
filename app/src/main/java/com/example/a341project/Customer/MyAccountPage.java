@@ -41,7 +41,7 @@ public class MyAccountPage extends AppCompatActivity {
             BufferedReader buff =new BufferedReader(ISR);
             while((line=buff.readLine())!=null){
                 String []part=line.split(",");
-                if(part[part.length-1].equals("1"))
+                if(part[part.length-1].equals("1")&&userName.equals(part[0]))
                     order=true;
             }
             return order;
